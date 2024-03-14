@@ -38,6 +38,6 @@ body {
 
 .eventos-lista {
     list-style-type: none;
-    text-align: left; /* Alinha o texto à esquerda */
+    text-align: left;
+    /* Alinha o texto à esquerda */
 }
-
