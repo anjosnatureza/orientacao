@@ -1,0 +1,43 @@
+/* Adicione a classe fixed-top para fixar o cabeçalho no topo */
+.navbar.fixed-top {
+    background-color: #006600 !important;
+    /*Cor de fundo*/
+    color: #ffffff !important;
+    /* Cor do texto */
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Adicione alguma margem superior para o corpo para compensar a altura do cabeçalho */
+body {
+    padding-top: 56px;
+    /* Ajuste este valor conforme necessário */
+}
+
+.footer {
+    background-color: #006600;
+    /* Verde bandeira do Paraná */
+    color: #ffffff;
+    /* Texto em branco para contraste */
+    padding: 2px 0;
+    /* Metade da altura original */
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+}
+
+.fixed-image-size {
+    width: 800px;
+    /* Defina a largura desejada */
+    height: 400px;
+    /* Defina a altura desejada */
+    object-fit: cover;
+    /* Para garantir que a imagem ocupe o espaço especificado sem distorção */
+}
+
+.eventos-lista {
+    list-style-type: none;
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
