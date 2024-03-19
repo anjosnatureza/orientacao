@@ -8,16 +8,11 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <link rel="stylesheet" href="css/styles.css">
 		<style>
-			/* CSS personalizado para ajustar a altura do carrossel */
-			#carouselExampleIndicators {
-				max-height: 500px; /* Defina a altura máxima desejada para o carrossel */
-			}
-			
-			/* CSS personalizado para ajustar a altura das imagens do carrossel */
+			/* CSS personalizado para ajustar a imagem dentro do carrossel */
 			.carousel-item img {
-				height: 100%; /* Faça as imagens preencherem verticalmente o carrossel */
-				width: auto; /* Garanta que a largura seja ajustada automaticamente */
-				object-fit: cover; /* Ajusta a imagem para cobrir todo o espaço disponível */
+				width: 100%; /* Faz com que a imagem preencha horizontalmente o carrossel */
+				height: 100%; /* Faz com que a imagem preencha verticalmente o carrossel */
+				object-fit: contain; /* Ajusta a imagem proporcionalmente dentro do espaço disponível, sem cortar nenhuma parte */
 			}
 		</style>
     </head>
