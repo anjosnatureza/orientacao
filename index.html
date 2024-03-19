@@ -4,176 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anjos da Natureza</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
     <style>
-        /* CSS personalizado para ajustar a mensagem de manutenção */
-        .maintenance-overlay, .privacy-overlay {
+        /* Estilos CSS */
+        .alerta {
             position: fixed;
             bottom: 20px;
-            right: 20px;
-            background-color: #333; /* Cor de fundo */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #f44336;
             color: white;
-            padding: 15px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            z-index: 9999; /* Garante que o overlay fique acima de todo o conteúdo */
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: none;
         }
-        .privacy-overlay {
-            left: 20px;
-        }
-        .privacy-overlay .btn-close {
-            margin-left: auto;
-            color: #fff;
-            font-size: 20px;
+
+        .fechar {
+            float: right;
             cursor: pointer;
-            padding: 5px;
-        }
-        .privacy-overlay .btn-close:hover {
-            color: #ccc;
-        }
-        .privacy-overlay .btn-ok {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            padding: 8px 15px;
-            margin-left: 10px;
-            cursor: pointer;
-        }
-        .privacy-overlay .btn-ok:hover {
-            background-color: #0056b3;
         }
     </style>
-</head>
-
-<body>
-<!-- Elemento de sobreposição de manutenção -->
-<div class="maintenance-overlay" id="maintenance-overlay">
-    <div class="maintenance-message">
-        <p>O site está em manutenção, <br>agradecemos a compreensão.</p>
-        <button type="button" class="btn btn-primary" onclick="exibirPoliticaPrivacidade()">OK</button>
-    </div>
-</div>
-
-<!-- Elemento de sobreposição de política de privacidade -->
-<div class="privacy-overlay" id="privacy-overlay" style="display: none;">
-    <div class="privacy-message">
-        <p>Política de Privacidade: Esta é uma mensagem sobre a política de privacidade do nosso site. Aqui você pode descrever como são coletadas, usadas e protegidas as informações dos visitantes. Para mais informações, consulte nossa página de Política de Privacidade.</p>
-        <button type="button" class="btn btn-primary btn-ok" onclick="fecharMensagem('.privacy-overlay')">OK</button>
-        <span class="btn-close" onclick="fecharMensagem('.privacy-overlay')">&times;</span>
-    </div>
-</div>
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top custom-navbar">
-    <a class="navbar-brand" href="#" style="color: white;">Associação de Orientação de Curitiba Anjos da Natureza</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="#inicio" style="color: white;">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#sobre" style="color: white;">Sobre</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#equipamentos" style="color: white;">Equipamentos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#resultados" style="color: white;">Resultados</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#eventos" style="color: white;">Eventos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#fotos" style="color: white;">Fotos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#documentos" style="color: white;">Documentos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#redes_sociais" style="color: white;">Redes Sociais</a>
-            </li>
-        </ul>
-        <div class="d-flex flex-row">
-            <a href="https://www.cob.org.br/pt/cob/confederacoes/cbo/" target="_blank">
-                <img src="img/Logo_CBO.jpg" alt="Logo" style="width: 50px; height: 50px; margin-right: 10px;" title="Confederação Brasileira de Orientação">
-            </a>
-            <a href="https://www.fpo.esp.br/" target="_blank">
-                <img src="img/logo_fpo.png" alt="Logo" style="width: 70px; height: 50px; margin-right: 10px;" title="Federação Paranaense de Orientação">
-            </a>
-            <a href="https://www.coc.esp.br/" target="_blank">
-                <img src="img/logo_coc.png" alt="Logo" style="width: 80px; height: 50px; margin-right: 10px;" title="Clube de Orientação de Curitiba">
-            </a>
-        </div>
-    </div>
-</nav>
-<br>
-<div class="container" id="inicio">
-    <div class="row">
-        <div class="col-md-12 text-center">
-            <h1>Seja Bem-vindo à Associação Anjos da Natureza</h1>
-            <p></p>
-
-            <div id="carouselSite" class="carousel slide" data-ride="carousel">
-
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselSite" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselSite" data-slide-to="1"></li>
-                    <li data-target="#carouselSite" data-slide-to="2"></li>
-                </ol>
-
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="img/img1.jpg" class="img-fluid d-block" alt="Imagem1">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/img2.jpg" class="img-fluid d-block" alt="Imagem2">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/img3.jpg" class="img-fluid d-block" alt="Imagem3">
-                    </div>
-                </div>
-
-                <a class="carousel-control-prev" href="#carouselSite" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                    <span class="sr-only">Anterior</span>
-                </a>
-
-                <a class="carousel-control-next" href="#carouselSite" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                    <span class="sr-only">Próximo</span>
-                </a>
-
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-<script>
-    // Função para fechar a mensagem
-    function fecharMensagem(elemento) {
-        // Verifica se o elemento existe antes de tentar fechar
-        if ($(elemento).length) {
-            $(elemento).hide();
+    <script>
+        // Função para exibir o alerta de manutenção quando a página é carregada
+        function exibirAlertaManutencao() {
+            alert("O site está em manutenção. Agradecemos a compreensão.");
         }
-    }
 
-    // Função para exibir a política de privacidade após clicar em "OK" na mensagem de manutenção
-    function exibirPoliticaPrivacidade() {
-        $('#maintenance-overlay').hide(); // Esconde a mensagem de manutenção
-        $('#privacy-overlay').show(); // Mostra a mensagem de política de privacidade
-    }
-</script>
+        // Função para exibir o alerta de política de privacidade
+        function exibirPoliticaPrivacidade() {
+            var alerta = document.getElementById('alerta-politica');
+            alerta.style.display = 'block';
+        }
+
+        // Função para fechar o alerta de política de privacidade
+        function fecharPoliticaPrivacidade() {
+            var alerta = document.getElementById('alerta-politica');
+            alerta.style.display = 'none';
+        }
+    </script>
+</head>
+<body onload="exibirAlertaManutencao()">
+    <!-- Conteúdo da página -->
+    <button onclick="exibirPoliticaPrivacidade()">Mostrar Política de Privacidade</button>
+    <div id="alerta-politica" class="alerta">
+        O site está em manutenção, agradecemos a compreensão.
+        <span class="fechar" onclick="fecharPoliticaPrivacidade()">X</span>
+    </div>
 </body>
 </html>
