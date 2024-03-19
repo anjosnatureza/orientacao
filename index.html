@@ -14,23 +14,36 @@
             height: 100%; /* Faz com que a imagem preencha verticalmente o carrossel */
             object-fit: contain; /* Ajusta a imagem proporcionalmente dentro do espaço disponível, sem cortar nenhuma parte */
         }
-
-        /* Estilo para o aviso de manutenção */
-        .maintenance-notice {
-            background-color: #f8d7da; /* Cor de fundo vermelha */
-            color: #721c24; /* Cor do texto */
-            padding: 10px; /* Espaçamento interno */
-            text-align: center; /* Texto centralizado */
-            font-weight: bold; /* Texto em negrito */
-        }
     </style>
 </head>
 
 <body>
-    <!-- Aviso de manutenção -->
-    <div class="maintenance-notice">
-        Este site está em manutenção. Pedimos desculpas pelo inconveniente.
+    <!-- Modal -->
+    <div class="modal fade" id="maintenanceModal" tabindex="-1" role="dialog" aria-labelledby="maintenanceModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="maintenanceModalLabel">Aviso de Manutenção</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Este site está em manutenção. Pedimos desculpas pelo inconveniente.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <script>
+        // Exibir o modal ao carregar a página
+        $(document).ready(function(){
+            $('#maintenanceModal').modal('show');
+        });
+    </script>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top custom-navbar">
         <a class="navbar-brand" href="#" style="color: white;">Associação de Orientação de Curitiba Anjos da Natureza</a>
