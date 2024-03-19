@@ -1,223 +1,394 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anjos da Natureza</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Anjos da Natureza</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+		<style>
+			/* CSS personalizado para ajustar a imagem dentro do carrossel */
+			.carousel-item img {
+				width: 100%; /* Faz com que a imagem preencha horizontalmente o carrossel */
+				height: 100%; /* Faz com que a imagem preencha verticalmente o carrossel */
+				object-fit: contain; /* Ajusta a imagem proporcionalmente dentro do espaço disponível, sem cortar nenhuma parte */
+			}
+		</style>
+    </head>
 
-<body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top custom-navbar">
-    <a class="navbar-brand" href="#" style="color: white;">Associação de Orientação de Curitiba Anjos da Natureza</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top custom-navbar">
+            <a class="navbar-brand" href="#" style="color: white;">Associação de Orientação de Curitiba Anjos da Natureza</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="#inicio" style="color: white;">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#sobre" style="color: white;">Sobre</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#equipamentos" style="color: white;">Equipamentos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#resultados" style="color: white;">Resultados</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#eventos" style="color: white;">Eventos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#fotos" style="color: white;">Fotos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#documentos" style="color: white;">Documentos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#redes_sociais" style="color: white;">Redes Sociais</a>
-            </li>
-        </ul>
-        <div class="d-flex flex-row">
-            <a href="https://www.cob.org.br/pt/cob/confederacoes/cbo/" target="_blank">
-                <img src="img/Logo_CBO.jpg" alt="Logo" style="width: 50px; height: 50px; margin-right: 10px;" title="Confederação Brasileira de Orientação">
-            </a>
-            <a href="https://www.fpo.esp.br/" target="_blank">
-                <img src="img/logo_fpo.png" alt="Logo" style="width: 70px; height: 50px; margin-right: 10px;" title="Federação Paranaense de Orientação">
-            </a>
-            <a href="https://www.coc.esp.br/" target="_blank">
-                <img src="img/logo_coc.png" alt="Logo" style="width: 80px; height: 50px; margin-right: 10px;" title="Clube de Orientação de Curitiba">
-            </a>
-        </div>
-    </div>
-</nav>
-<br>
-<div class="container" id="inicio">
-    <div class="row">
-        <div class="col-md-12 text-center">
-            <h1>Seja Bem-vindo à Associação Anjos da Natureza</h1>
-            <p>Este é um exemplo básico de um site institucional responsivo usando HTML5, CSS, JavaScript e Bootstrap.</p>
-
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="img/2023_wcr1_banner.jpg" class="d-block w-100 fixed-image-size" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/world-mundial.png" class="d-block w-100 fixed-image-size" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img/BannerSite.57c1f64236a04b7d9bee.webp" class="d-block w-100 fixed-image-size" alt="...">
-                    </div>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio" style="color: white;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre" style="color: white;">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#equipamentos" style="color: white;">Equipamentos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#resultados" style="color: white;">Resultados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#eventos" style="color: white;">Eventos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#fotos" style="color: white;">Fotos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#documentos" style="color: white;">Documentos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#redes_sociais" style="color: white;">Redes Sociais</a>
+                    </li>
+                </ul>
+                <div class="d-flex flex-row">
+                    <a href="https://www.cob.org.br/pt/cob/confederacoes/cbo/" target="_blank">
+                        <img src="img/Logo_CBO.jpg" alt="Logo" style="width: 50px; height: 50px; margin-right: 10px;" title="Confederação Brasileira de Orientação">
+                    </a>
+                    <a href="https://www.fpo.esp.br/" target="_blank">
+                        <img src="img/logo_fpo.png" alt="Logo" style="width: 70px; height: 50px; margin-right: 10px;" title="Federação Paranaense de Orientação">
+                    </a>
+                    <a href="https://www.coc.esp.br/" target="_blank">
+                        <img src="img/logo_coc.png" alt="Logo" style="width: 80px; height: 50px; margin-right: 10px;" title="Clube de Orientação de Curitiba">
+                    </a>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
             </div>
-        </div>
-    </div>
-    <br>
-    <div class="row">
-        <div id="sobre" class="row">
-            <div class="col-md-12">
-                <h2 style="text-align: center;">Sobre</h2>
-                <p style="text-align: justify;">
-                    A corrida de orientação é mais do que apenas uma competição atlética; é uma aventura que combina resistência física, habilidades de navegação e estratégia. Neste esporte, os competidores correm através de
-                    terrenos variados, como florestas, montanhas e áreas urbanas, enquanto navegam por uma série de pontos de controle usando apenas um mapa e uma bússola.
-                </p>
-                <p style="text-align: justify;">
-                    A diversidade dos cenários torna cada corrida única, desafiando os participantes a adaptarem suas habilidades a diferentes tipos de terreno e condições climáticas. Além da velocidade e resistência, a corrida de
-                    orientação exige concentração e tomada de decisões rápidas, já que os competidores precisam escolher a melhor rota para alcançar os pontos de controle no menor tempo possível.
-                </p>
-                <p style="text-align: justify;">
-                    Este esporte oferece uma oportunidade não apenas para competir, mas também para explorar novos lugares e desfrutar da natureza. É uma experiência que testa os limites físicos e mentais dos atletas, ao mesmo tempo
-                    em que promove o trabalho em equipe e a camaradagem entre os participantes. Em última análise, a corrida de orientação é uma celebração da aventura e da busca constante pelo desafio.
-                </p>
+        </nav>
+        <br>
+        <div class="container" id="inicio">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1>Seja Bem-vindo à Associação Anjos da Natureza</h1>
+                    <p></p>
+
+					<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+						<ol class="carousel-indicators">
+								<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+								<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+								<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+							</ol>
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<img src="img/WhatsApp Image 2024-03-18 at 21.37.00 (1).jpeg" class="d-block w-100" alt="...">
+								</div>
+								<div class="carousel-item">
+									<img src="img/WhatsApp Image 2024-03-18 at 21.36.59 (1).jpeg" class="d-block w-100" alt="...">
+								</div>
+								<div class="carousel-item">
+									<img src="img/WhatsApp Image 2024-03-18 at 21.37.00.jpeg" class="d-block w-100" alt="...">
+								</div>
+							</div>
+							<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							</a>
+							<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							</a>
+						</div>
+                </div>
             </div>
-        </div>
-    </div>
-    <div class="row">
-        <div id="equipamentos" class="row">
-            <div class="col-md-12">
-                <h2 style="text-align: center;">Equipamentos</h2>
-                <div class="row text-justify">
-                    <div class="col-md-3">
-                        <h3><img src="img/icon/map-solid.svg" alt="Mapa" width="32" height="32"> Mapa</h3>
-                        <p>
-                            1. Os mapas de orientação são criados exclusivamente para esse esporte. São detalhados, precisos e projetados para uma “escala humana”. Representam o terreno com características que uma pessoa observaria
-                            facilmente ao se mover na área.<br>
-                            <br>
-
-                            2. Características dos Mapas: Não apontam o Norte geográfico, mas sim o Norte magnético (devido ao uso de bússolas pelos atletas). Incluem detalhes como vegetação, relevo, hidrografia, rochas e
-                            construções humanas.<br>
-                            <br>
-
-                            3. Padrões Internacionais: A IOF (Federação Internacional de Orientação) define regras para a criação de mapas em todo o mundo.<br>
-                            <br>
-
-                            Os mapas de orientação são equipamentos fundamentais para os atletas navegarem pelo terreno e alcançarem os pontos de controle durante as provas.
+            <br>
+            <div class="row">
+                <div id="sobre" class="row">
+                    <div class="col-md-12">
+                        <h2 style="text-align: center;">Sobre</h2>
+                        <p style="text-align: justify;">
+                            A corrida de orientação é mais do que apenas uma competição atlética; é uma aventura que combina resistência física, habilidades de navegação e estratégia. Neste esporte, os competidores correm através de
+                            terrenos variados, como florestas, montanhas e áreas urbanas, enquanto navegam por uma série de pontos de controle usando apenas um mapa e uma bússola.
                         </p>
-                    </div>
-                    <div class="col-md-3">
-                        <h3><img src="img/icon/compass-solid.svg" alt="Bússola" width="32" height="32"> Bússola</h3>
-                        <p>
-                            A bússola é uma ferramenta fundamental no esporte de orientação. Aqui estão os principais pontos sobre seu uso:<br>
-                            <br>
-                            1. Navegação Precisa:<br>
-
-                            A bússola ajuda os atletas a se orientarem no terreno. Indica o norte magnético, permitindo que os competidores sigam direções precisas.<br>
-                            <br>
-
-                            2. Técnica de Uso: Os atletas seguram a bússola nivelada e alinham a agulha com a marcação de norte. Isso ajuda a determinar a direção correta para alcançar os pontos de controle.<br>
-                            <br>
-
-                            3. Treinamento Essencial: Atletas de orientação praticam habilidades de bússola para melhorar sua precisão na navegação.
+                        <p style="text-align: justify;">
+                            A diversidade dos cenários torna cada corrida única, desafiando os participantes a adaptarem suas habilidades a diferentes tipos de terreno e condições climáticas. Além da velocidade e resistência, a corrida de
+                            orientação exige concentração e tomada de decisões rápidas, já que os competidores precisam escolher a melhor rota para alcançar os pontos de controle no menor tempo possível.
                         </p>
-                    </div>
-                    <div class="col-md-3">
-                        <h3><img src="img/icon/shoe-prints-solid.svg" alt="Calçado" width="32" height="32"> Calçado</h3>
-                        <p>
-                            Calçado de Orientação não possui um tipo específico definido. No entanto, independentemente de serem botas, tênis ou sapatos, o calçado escolhido deve ser o mais cômodo, leve e resistente possível. Ele
-                            também deve proporcionar um andar seguro e aderência ao terreno variado encontrado na prática da orientação.
-                        </p>
-                    </div>
-                    <div class="col-md-3">
-                        <h3>
-                            <img src="img/icon/shirt-solid.svg" alt="Vestimentas" width="32" height="32">
-                            Vestimentas
-                        </h3>
-                        <p>
-                            As vestimentas no esporte de orientação desempenham um papel crucial para o sucesso dos atletas. Aqui estão os principais pontos: Roupas Adequadas:<br>
-                            <br>
-
-                            1. As roupas devem cobrir as pernas para proteger contra vegetação e arranhões. Calças compridas são recomendadas. Camisetas leves e respiráveis são ideais.<br>
-                            <br>
-
-                            2. Calçados Específicos: Tênis ou sapatos com boa aderência e suporte são essenciais. Devem ser confortáveis para longas distâncias e terrenos variados.<br>
-                            <br>
-
-                            3. Proteção Solar e Clima:<br>
-                            Use chapéus, bonés ou óculos de sol para proteger-se do sol. Adapte as roupas conforme o clima (camadas para frio, roupas leves para calor). Em resumo, escolha roupas funcionais, confortáveis e adequadas
-                            ao terreno para aproveitar ao máximo o esporte de orientação.
+                        <p style="text-align: justify;">
+                            Este esporte oferece uma oportunidade não apenas para competir, mas também para explorar novos lugares e desfrutar da natureza. É uma experiência que testa os limites físicos e mentais dos atletas, ao mesmo tempo
+                            em que promove o trabalho em equipe e a camaradagem entre os participantes. Em última análise, a corrida de orientação é uma celebração da aventura e da busca constante pelo desafio.
                         </p>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="row">
-        <div id="resultados" class="row">
-            <div class="col-md-12">
-                <h2 style="text-align: center;">Resultados</h2>
-                <p>
-                    Os resultados das corridas de orientação são uma combinação de velocidade, precisão e estratégia. Aqui estão os principais fatores que influenciam os resultados:<br>
-                    <br>
+            <div class="row">
+                <div id="equipamentos" class="row">
+                    <div class="col-md-12">
+                        <h2 style="text-align: center;">Equipamentos</h2>
+                        <div class="row text-justify">
+                            <div class="col-md-3">
+                                <h3><img src="img/icon/map-solid.svg" alt="Mapa" width="32" height="32"> Mapa</h3>
+                                <p>
+                                    1. Os mapas de orientação são criados exclusivamente para esse esporte. São detalhados, precisos e projetados para uma “escala humana”. Representam o terreno com características que uma pessoa observaria
+                                    facilmente ao se mover na área.<br>
+                                    <br>
 
-                    1. Velocidade: Competidores mais rápidos podem completar o percurso mais rapidamente, ganhando uma vantagem sobre os outros concorrentes.<br>
-                    <br>
+                                    2. Características dos Mapas: Não apontam o Norte geográfico, mas sim o Norte magnético (devido ao uso de bússolas pelos atletas). Incluem detalhes como vegetação, relevo, hidrografia, rochas e
+                                    construções humanas.<br>
+                                    <br>
 
-                    2. Precisão na Navegação: A capacidade de ler o mapa com precisão e escolher a melhor rota para alcançar os pontos de controle é crucial. Erros de navegação podem custar tempo precioso.<br>
-                    <br>
+                                    3. Padrões Internacionais: A IOF (Federação Internacional de Orientação) define regras para a criação de mapas em todo o mundo.<br>
+                                    <br>
 
-                    3. Estratégia: Decidir a ordem dos pontos de controle a serem visitados e a melhor rota para alcançá-los é uma parte importante da estratégia de corrida. Os atletas devem equilibrar a eficiência da rota com a
-                    dificuldade do terreno e outros fatores.<br>
-                    <br>
+                                    Os mapas de orientação são equipamentos fundamentais para os atletas navegarem pelo terreno e alcançarem os pontos de controle durante as provas.
+                                </p>
+                            </div>
+                            <div class="col-md-3">
+                                <h3><img src="img/icon/compass-solid.svg" alt="Bússola" width="32" height="32"> Bússola</h3>
+                                <p>
+                                    A bússola é uma ferramenta fundamental no esporte de orientação. Aqui estão os principais pontos sobre seu uso:<br>
+                                    <br>
+                                    1. Navegação Precisa:<br>
 
-                    4. Condições do Terreno: O terreno pode variar de florestas densas a áreas urbanas, cada uma apresentando desafios únicos. Competidores habilidosos podem se adaptar a diferentes tipos de terreno e tomar decisões
-                    rápidas para otimizar seu desempenho.
-                </p>
+                                    A bússola ajuda os atletas a se orientarem no terreno. Indica o norte magnético, permitindo que os competidores sigam direções precisas.<br>
+                                    <br>
+
+                                    2. Técnica de Uso: Os atletas seguram a bússola nivelada e alinham a agulha com a marcação de norte. Isso ajuda a determinar a direção correta para alcançar os pontos de controle.<br>
+                                    <br>
+
+                                    3. Treinamento Essencial: Atletas de orientação praticam habilidades de bússola para melhorar sua precisão na navegação.
+                                </p>
+                            </div>
+                            <div class="col-md-3">
+                                <h3><img src="img/icon/shoe-prints-solid.svg" alt="Calçado" width="32" height="32"> Calçado</h3>
+                                <p>
+                                    Calçado de Orientação não possui um tipo específico definido. No entanto, independentemente de serem botas, tênis ou sapatos, o calçado escolhido deve ser o mais cômodo, leve e resistente possível. Ele
+                                    também deve proporcionar um andar seguro e aderência ao terreno variado encontrado na prática da orientação.
+                                </p>
+                            </div>
+                            <div class="col-md-3">
+                                <h3>
+                                    <img src="img/icon/shirt-solid.svg" alt="Vestimentas" width="32" height="32">
+                                    Vestimentas
+                                </h3>
+                                <p>
+                                    As vestimentas no esporte de orientação desempenham um papel crucial para o sucesso dos atletas. Aqui estão os principais pontos: Roupas Adequadas:<br>
+                                    <br>
+
+                                    1. As roupas devem cobrir as pernas para proteger contra vegetação e arranhões. Calças compridas são recomendadas. Camisetas leves e respiráveis são ideais.<br>
+                                    <br>
+
+                                    2. Calçados Específicos: Tênis ou sapatos com boa aderência e suporte são essenciais. Devem ser confortáveis para longas distâncias e terrenos variados.<br>
+                                    <br>
+
+                                    3. Proteção Solar e Clima:<br>
+                                    Use chapéus, bonés ou óculos de sol para proteger-se do sol. Adapte as roupas conforme o clima (camadas para frio, roupas leves para calor). Em resumo, escolha roupas funcionais, confortáveis e adequadas
+                                    ao terreno para aproveitar ao máximo o esporte de orientação.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div id="resultados" class="row"></div>
+                <div class="col-md-12">
+                    <h2 style="text-align: center;">Resultados</h2>
+                    <p style="text-align: justify;">
+                        O esporte de orientação oferece diversos benefícios para quem o pratica, tanto em termos físicos, quanto mentais e sociais.
+
+						No aspecto físico:
+
+						A corrida em meio à natureza aumenta a capacidade cardiorrespiratória e a resistência física.
+						O percurso irregular exige o uso de diferentes grupos musculares, proporcionando força e tônus muscular.
+						A necessidade de ler o mapa e se orientar no terreno exige coordenação entre olhos, mãos e pés.
+						A prática regular do esporte contribui para a flexibilidade articular e muscular.
+						A necessidade de se locomover em terrenos acidentados desenvolve o equilíbrio e a propriocepção.<br><br>
+						<strong>No aspecto mental:</strong><br>
+
+						A leitura do mapa e a tomada de decisões rápidas exigem concentração e foco.
+						O atleta precisa lidar com desafios inesperados no terreno e encontrar soluções rápidas.
+						A superação dos desafios do esporte contribui para a autoconfiança e a autoestima.
+						O contato com a natureza e a atividade física proporcionam relaxamento e bem-estar mental.
+						As modalidades em equipe desenvolvem a comunicação, a colaboração e o trabalho em conjunto.<br><br>
+						<strong>No aspecto social:</strong><br>
+
+						O esporte promove o contato com a natureza e a consciência ambiental.
+						A prática em grupo incentiva a socialização e a criação de novas amizades.
+						O esporte desperta o senso de aventura e a vontade de explorar novos lugares.
+						A prática do esporte é divertida e desafiadora, proporcionando momentos de lazer e descontração.<br><br>
+						<strong>Outros resultados:</strong><br>
+
+						A leitura de mapas e a bússola desenvolvem a capacidade de se orientar em diferentes ambientes.
+						A prática do esporte permite conhecer novos lugares e suas características.
+						O atleta precisa planejar seu trajeto e tomar decisões estratégicas para alcançar o objetivo.<br><br>
+						<strong>Importante:</strong><br>
+
+						Os resultados da prática do esporte de orientação variam de acordo com a frequência e a intensidade da prática, as características do terreno, o nível de condicionamento físico e a idade do praticante.
+						É importante consultar um médico antes de iniciar a prática do esporte, especialmente para pessoas com problemas de saúde.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div id="eventos" class="col-md-12 text-center">
+                    <!-- Centraliza o conteúdo -->
+                    <h2>Eventos</h2>
+                    <!-- Título centralizado -->
+                    <ul class="list-unstyled">
+                        <!-- Remove os marcadores da lista -->
+                        <li class="text-left">
+                            <!-- Alinha os itens à esquerda -->
+                            <i class="fas fa-calendar"></i>
+                            <a href="https://www.fosp.com.br/evento/1-etapa-campinas-campor-2024" style="text-decoration: none; color: #0000ee;" target="_blank">13/05/2024 | 1ª etapa - Campinas - CAMPOR 2024 - Campinas - SP</a>
+                        </li>
+                        <li class="text-left">
+                            <!-- Alinha os itens à esquerda -->
+                            <i class="fas fa-calendar"></i>
+                            <a href="https://www.fosp.com.br/evento/1220" style="text-decoration: none; color: #0000ee;" target="_blank">01 a 03 de Março/2024 | VIII Copa Sul de Orientação - Copa Sul 2024</a>
+                        </li>
+
+                        <li class="text-left">
+                            <!-- Alinha os itens à esquerda -->
+                            <i class="fas fa-calendar"></i>
+                            <a href="https://www.fosp.com.br/evento/1220" style="text-decoration: none; color: #0000ee;" target="_blank">07/08/2024 | Copa Mercosul - RJ</a>
+                        </li>
+
+                        <li class="text-left">
+                            <!-- Alinha os itens à esquerda -->
+                            <i class="fas fa-calendar"></i>
+                            <a href="https://www.fosp.com.br/evento/1219" style="text-decoration: none; color: #0000ee;" target="_blank">I Troféu COqueiro de Orientação - I TCOo 2023</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div id="fotos" class="col-md-12 text-center">
+                    <!-- Centraliza o conteúdo -->
+                    <h2>Fotos</h2>
+                    <!-- Título centralizado -->
+                    <ul class="list-unstyled">
+                        <!-- Remove os marcadores da lista -->
+                        <li class="text-left">
+                            <!-- Alinha os itens à esquerda -->
+                            <i class="fas fa-camera"></i>
+                            <a
+                                href="https://photos.google.com/share/AF1QipO5FAmcPgtLAh2dq9mFepjdDgU4suIt2A0HzrVqcyXkPjSdv5R5iAyhr2tZA1COOQ?key=bWVVVWxBc0lJM0E5c1V2LVRQelFFUUd3R01zYkNB"
+                                style="text-decoration: none; color: #0000ee;"
+                                target="_blank"
+                            >
+                                Copa sul 2020 - Percurso Longo - Ponta Grossa - 14/03/2020 - Fotografo Matheus Felipe
+                            </a>
+                        </li>
+                        <li class="text-left">
+                            <!-- Alinha os itens à esquerda -->
+                            <i class="fas fa-camera"></i>
+                            <a
+                                href="https://photos.google.com/share/AF1QipN_l5tbefmkOkHllMXAECIDfWXXagGF0ScixrpGY5cEk0YEYMswD9cC9MMsOS8HOw?key=cEVLZGhja2R4RGNIWG1UTVNTMHRrbUh5SzlDbzJR"
+                                style="text-decoration: none; color: #0000ee;"
+                                target="_blank"
+                            >
+                                Copa sul 2020 - Percurso Médio - Haras Tayna, Ponta Grossa - 15/03/2020 - Fotógrafo Alan Jhony
+                            </a>
+                        </li>
+
+                        <li class="text-left">
+                            <!-- Alinha os itens à esquerda -->
+                            <i class="fas fa-camera"></i>
+                            <a
+                                href="https://photos.google.com/share/AF1QipOr5hy_ezD8OI5oGCSIhuLi7WDQrI0Y3jsg7XUJN9Pb_yaB3ZEIATA1eayOsU6U7Q?key=aHJsQy1HTWI2LWZzTlpJWXhXaUh3cUMxMHh0Zi1R"
+                                style="text-decoration: none; color: #0000ee;"
+                                target="_blank"
+                            >
+                                Copa sul 2020 - Percurso Longo - Ponta Grossa - 14/03/2020 - Fotógrafo Alan Jhony
+                            </a>
+                        </li>
+
+                        <li class="text-left">
+                            <!-- Alinha os itens à esquerda -->
+                            <i class="fas fa-camera"></i>
+                            <a href="https://www.flickr.com/photos/orientacaoesporte/albums/72157711223698422" style="text-decoration: none; color: #0000ee;" target="_blank">2019 - CMOC - 4ª Etapa</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div id="documentos" class="col-md-12 text-center">
+                    <!-- Centraliza o conteúdo -->
+                    <h2>Documentos</h2>
+                    <!-- Título centralizado -->
+                    <ul class="list-unstyled">
+                        <!-- Remove os marcadores da lista -->
+                        <li class="text-left">
+                            <!-- Alinha os itens à esquerda -->
+                            <i class="fas fa-file-pdf"></i>
+                            <a href="docs/20240217_164952_Resultado_1ª_Percurso_Sprint_17Fev24.pdf" style="text-decoration: none; color: #0000ee;" target="_blank">
+                                Copa sul 2020 - Percurso Longo - Ponta Grossa - 14/03/2020 - Fotografo Matheus Felipe
+                            </a>
+                        </li>
+                        <li class="text-left">
+                            <!-- Alinha os itens à esquerda -->
+                            <i class="fas fa-file-pdf"></i>
+                            <a href="docs/20240218_093129_Insc%20Sprin%202ºPerc%20Pato%20Branco.pdf" style="text-decoration: none; color: #0000ee;" target="_blank">
+                                Copa sul 2020 - Percurso Médio - Haras Tayna, Ponta Grossa - 15/03/2020 - Fotógrafo Alan Jhony
+                            </a>
+                        </li>
+
+                        <li class="text-left">
+                            <!-- Alinha os itens à esquerda -->
+                            <i class="fas fa-file-pdf"></i>
+                            <a href="docs/Ranking%202024%20-%2015fev24_CBO.pdf" style="text-decoration: none; color: #0000ee;" target="_blank">Copa sul 2020 - Percurso Longo - Ponta Grossa - 14/03/2020 - Fotógrafo Alan Jhony</a>
+                        </li>
+
+                        <li class="text-left">
+                            <!-- Alinha os itens à esquerda -->
+                            <i class="fas fa-file-pdf"></i>
+                            <a href="docs/Ranking%202024%20-%2015fev24_CBO.pdf" style="text-decoration: none; color: #0000ee;" target="_blank">2019 - CMOC - 4ª Etapa</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div id="redes_sociais" class="col-md-12 text-center">
+                    <!-- Centraliza o conteúdo -->
+                    <div class="col-md-12">
+                        <h2 style="text-align: center;">Redes Sociais</h2>
+
+                        <br>
+                        <div class="social-icons">
+                            <a href="https://wa.me/551234567890" target="_blank" style="margin-right: 10px;">
+                                <i class="fab fa-whatsapp" style="font-size: 32px; color: #25d366; cursor: pointer;"></i>
+                            </a>
+                            <a href="https://twitter.com/iStock?lang=pt-br" target="_blank" style="margin-right: 10px;">
+                                <i class="fab fa-twitter" style="font-size: 32px; color: #1da1f2; cursor: pointer;"></i>
+                            </a>
+                            <a href="https://www.instagram.com/istockbrasil/" target="_blank">
+                                <i class="fab fa-instagram" style="font-size: 32px; color: #e4405f; cursor: pointer;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-
-<footer class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <p>© 2024 Associação de Orientação de Curitiba Anjos da Natureza</p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <footer class="footer mt-auto py-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p>&reg; 2024 Associação de Orientação de Curitiba Anjos da Natureza. <br>Todos os direitos reservados.</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</footer>
+        </footer>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
 </html>
