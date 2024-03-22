@@ -419,4 +419,22 @@
 	</div>
 	    
     </body>
+	<script>
+    window.addEventListener('DOMContentLoaded', function() {
+        var carousel = document.querySelector('.dynamic-height-carousel');
+        var aspectRatio = 0.5; // proporção desejada entre altura e largura
+
+        function setCarouselHeight() {
+            var width = carousel.offsetWidth;
+            var height = width * aspectRatio;
+            carousel.style.height = height + 'px';
+        }
+
+        setCarouselHeight(); // Define a altura inicialmente
+
+        // Recalcula a altura do carrossel quando a janela for redimensionada
+        window.addEventListener('resize', setCarouselHeight);
+    });
+</script>
+
 </html>
