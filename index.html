@@ -10,8 +10,8 @@
 		<style>
 			/* CSS personalizado para ajustar a imagem dentro do carrossel */
 			.carousel-item img {
-				width: 50%; /* Faz com que a imagem preencha horizontalmente o carrossel */
-				height: 50%; /* Faz com que a imagem preencha verticalmente o carrossel */
+				width: 100%; /* Faz com que a imagem preencha horizontalmente o carrossel */
+				height: 100%; /* Faz com que a imagem preencha verticalmente o carrossel */
 				object-fit: contain; /* Ajusta a imagem proporcionalmente dentro do espaço disponível, sem cortar nenhuma parte */
 			}
 		</style>
@@ -98,26 +98,6 @@
 							</a>
 						</div>
                 </div>
-		          <!-- Popup de cookies -->
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                // Cria o elemento do popup
-                var popup = document.createElement("div");
-                popup.innerHTML = `
-                    <div class="popup" style="position: fixed; bottom: 0; width: 100%; background-color: #f8f9fa; padding: 10px; text-align: center; box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); z-index: 999;">
-                        <p>Este site utiliza cookies. Cookies são importantes para o funcionamento deste site, para garantir a sua segurança e para melhorar a sua experiência. Ao clicar em OK, você concorda com a utilização de todos os cookies. Para mais informações acesse a <a href="#">Política de cookies</a> e nossa <a href="#">Política de Privacidade</a>.</p>
-                        <button onclick="closePopup()" style="padding: 5px 10px; background-color: #007bff; color: #fff; border: none; cursor: pointer;">OK</button>
-                    </div>
-                `;
-                // Adiciona o popup ao corpo do documento
-                document.body.appendChild(popup);
-            });
-
-            // Função para fechar o popup
-            function closePopup() {
-                document.querySelector('.popup').style.display = 'none';
-            }
-        </script>
             </div>
             <br>
             <div class="row">
@@ -405,39 +385,10 @@
             </div>
         </footer>
 
-	    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-	    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-	    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-	    <script src="js/script.js"></script>
-	    
-	<div id="popup" class="popup">
-	    <div class="popup-content">
-	        <p>Este site utiliza cookies. Cookies são importantes para o funcionamento deste site, para garantir a sua segurança e para melhorar a sua experiência. Ao clicar em OK, você concorda com a utilização de todos os cookies. Para mais informações acesse a <a href="#">Política de cookies</a> e nossa <a href="#">Política de Privacidade</a>.</p>
-	        <button id="popup-close">OK</button>
-	    </div>
-	</div>
-	    
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="js/script.js"></script>
     </body>
-<script>
-    window.addEventListener('DOMContentLoaded', function() {
-        // Função para definir a altura do carrossel dinamicamente
-        function setCarouselHeight() {
-            var carousel = document.querySelector('.carousel'); // Seleciona o elemento do carrossel
-            if (carousel) { // Verifica se o elemento do carrossel existe
-                var width = carousel.offsetWidth;
-                var aspectRatio = 0.5; // proporção desejada entre altura e largura
-                var height = width * aspectRatio;
-                carousel.style.height = height + 'px';
-            }
-        }
-
-        setCarouselHeight(); // Define a altura inicialmente
-
-        // Recalcula a altura do carrossel quando a janela for redimensionada
-        window.addEventListener('resize', setCarouselHeight);
-    });
-</script>
-
-
 </html>
