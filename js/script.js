@@ -32,8 +32,8 @@ document.addEventListener("DOMContentLoaded", function () {
     $(".carousel").carousel();
 });
 
-<script>
-    $(document).ready(function(){
-        $('#maintenanceModal').modal('show');
-    });
-</script>
+
+$(document).ready(function(){
+    $('#maintenanceModal').modal('show');
+});
+
