@@ -130,7 +130,8 @@ body {
     object-position: center; /* Centraliza a imagem verticalmente */
 }
 
-
-
-
-
+.gallery-img {
+	width: 200px; /* Largura fixa */
+	height: 200px; /* Altura fixa */
+	object-fit: cover; /* Mantém a proporção da imagem */
+}
