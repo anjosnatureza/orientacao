@@ -127,5 +127,5 @@ color: white;
 }
 
 .carousel-item img {
-    max-height: 100%; /* Define a altura máxima das imagens como 100% do tamanho do elemento pai (carrossel) */
+    max-height: 75%; /* Define a altura máxima das imagens como 100% do tamanho do elemento pai (carrossel) */
 }
