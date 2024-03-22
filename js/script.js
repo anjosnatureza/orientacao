@@ -1,8 +1,8 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
     const links = document.querySelectorAll(".nav-link, .navbar-brand");
 
     links.forEach((link) => {
-        link.addEventListener("click", function (event) {
+        link.addEventListener("click", function(event) {
             event.preventDefault();
             const headerHeight = document.querySelector(".navbar").offsetHeight;
             const sectionId = link.getAttribute("href");
@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Check if the menu is in responsive mode and close it
             const navbarToggler = document.querySelector(".navbar-toggler");
+
             if (navbarToggler && navbarToggler.getAttribute("aria-expanded") === "true") {
                 navbarToggler.click(); // Close the responsive menu
             }
