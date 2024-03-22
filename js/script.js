@@ -30,10 +30,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Initialize carousel
     $(".carousel").carousel();
-});
 
-
-$(document).ready(function(){
+    // Show maintenance modal on page load
     $('#maintenanceModal').modal('show');
-});
 
+    // Smooth scrolling to the top of the page when the page is loaded or refreshed
+    window.onload = function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+});
