@@ -125,3 +125,7 @@ color: white;
 .popup button:hover {
     background-color: #0056b3;
 }
+
+.carousel-item img {
+    max-height: 100%; /* Define a altura máxima das imagens como 100% do tamanho do elemento pai (carrossel) */
+}
