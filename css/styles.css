@@ -18,7 +18,7 @@ body {
     padding: 2px 0; /* Metade da altura original */
     bottom: 0;
     width: 100%;
-    position: fixed;
+    /* position: fixed; */
 }
 
 .fixed-image-size {
