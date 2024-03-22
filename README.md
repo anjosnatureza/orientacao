@@ -1,1 +1,1 @@
-Site do Esporte de Orientação
+Site sobre a associação do Esporte de Orientação.
