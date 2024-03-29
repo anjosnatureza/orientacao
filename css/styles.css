@@ -27,6 +27,7 @@ body {
     object-fit: cover; /* Para garantir que a imagem ocupe o espaço especificado sem distorção */
 }
 
+
 .eventos-lista {
     list-style-type: none;
     text-align: left; /* Alinha o texto à esquerda */
@@ -75,17 +76,6 @@ body {
     text-align: center;
     color: white;
     font-size: 24px;
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-}
-
-.close-button {
-    background-color: transparent;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    color: black; /* Cor do botão */
 }
 
 .popup {
@@ -127,6 +117,12 @@ body {
 }
 
 /* Ajuste a largura das imagens dentro do carousel */
+/* .carousel-item img { */
+    /* width: 100%; /* Define a largura das imagens para ocupar toda a largura do carrossel */ */
+    /* height: calc(50vh - 56px); /* Metade da altura da viewport menos a altura do cabeçalho */ */
+    /* object-fit: cover; /* Ajusta a imagem mantendo a proporção e cobrindo todo o espaço disponível */ */
+/* } */
+
 .carousel-item img {
     width: 100%; /* Define a largura das imagens para ocupar toda a largura do carrossel */
     height: calc(12.5vh - 56px); /* Altura reduzida em cerca de 4 vezes */
@@ -135,27 +131,7 @@ body {
 }
 
 .gallery-img {
-    width: 200px; /* Largura fixa */
-    height: 200px; /* Altura fixa */
-    object-fit: cover; /* Mantém a proporção da imagem */
-}
-
-/* Estilos personalizados */
-#search-container {
-    padding-top: 100px; /* Ajuste a altura conforme necessário */
-    text-align: center;
-}
-
-.search-form {
-    max-width: 500px; /* Ajuste a largura máxima conforme necessário */
-    margin: 0 auto; /* Centraliza horizontalmente */
-}
-
-.form-control {
-    width: 50%;
-    margin: 0 auto; /* Centralizado horizontalmente */
-}
-
-.btn-primary {
-    background-color: transparent;
+	width: 200px; /* Largura fixa */
+	height: 200px; /* Altura fixa */
+	object-fit: cover; /* Mantém a proporção da imagem */
 }
