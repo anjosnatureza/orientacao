@@ -60,5 +60,5 @@ document.addEventListener("DOMContentLoaded", function() {
             // Oculta a sobreposição de manutenção ao clicar no botão de fechar
             maintenanceOverlay.style.display = 'none';
         });
-    </script>
+    
 });
