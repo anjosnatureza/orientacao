@@ -81,7 +81,8 @@ body {
 }
 
 .close-button {
-    background-color: transparent;
+    background-color: #006600;  
+    /* background-color: transparent;*/
     border: none;
     font-size: 20px;
     cursor: pointer;
