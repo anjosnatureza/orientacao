@@ -184,7 +184,14 @@
             padding: 20px;
             border-radius: 5px;
             text-align: center;
-            color: black; /* Cor do texto */
+        }
+
+        h2 {
+            color: red; /* Cor vermelha para o título */
+        }
+
+        p {
+            color: black; /* Cor preta para o parágrafo */
         }
 
         .close-button {
