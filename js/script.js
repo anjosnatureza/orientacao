@@ -44,8 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     // Show atual date 
-    window.onload = function() {
-        var anoAtual = new Date().getFullYear();
-        document.getElementById("anoAtual").innerHTML = anoAtual;
-    };
+    var spanAno = document.getElementById('anoAtual');
+    var anoAtual = new Date().getFullYear();
+    spanAno.textContent = anoAtual;
 });
