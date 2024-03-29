@@ -157,10 +157,11 @@
      margin: 0 auto;
     /* Centraliza horizontalmente */
 }
- .form-control {
-     /* width: 50%; */
-  margin: 50 auto;
+.form-control {
+    width: 50%; 
+    margin: 0 auto; /* Centralizado horizontalmente */
 }
+
 .btn-primary {
   background-color: #007bff;
 }
