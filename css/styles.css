@@ -157,13 +157,5 @@ body {
 }
 
 .btn-primary {
-    background-color: #007bff;
-}
-
-h2 {
-    color: red; /* Cor vermelha para o título */
-}
-
-p {
-    color: black; /* Cor preta para o parágrafo */
+    background-color: transparent;
 }
