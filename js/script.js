@@ -42,4 +42,10 @@ document.addEventListener("DOMContentLoaded", function() {
             behavior: 'smooth'
         });
     };
+
+    // Show atual date 
+    window.onload = function() {
+        var anoAtual = new Date().getFullYear();
+        document.getElementById("anoAtual").innerHTML = anoAtual;
+    };
 });
