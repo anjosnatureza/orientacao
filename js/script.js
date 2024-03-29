@@ -47,4 +47,18 @@ document.addEventListener("DOMContentLoaded", function() {
     var spanAno = document.getElementById('anoAtual');
     var anoAtual = new Date().getFullYear();
     spanAno.textContent = anoAtual;
+
+    // referente ao popup de alerta de site em manutenção
+         // Seleciona o botão de fechar
+        var closeButton = document.querySelector('.close-button');
+
+        // Seleciona a sobreposição de manutenção
+        var maintenanceOverlay = document.querySelector('.maintenance-overlay');
+
+        // Adiciona um evento de clique ao botão de fechar
+        closeButton.addEventListener('click', function() {
+            // Oculta a sobreposição de manutenção ao clicar no botão de fechar
+            maintenanceOverlay.style.display = 'none';
+        });
+    </script>
 });
