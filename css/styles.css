@@ -135,3 +135,13 @@ body {
 	height: 200px; /* Altura fixa */
 	object-fit: cover; /* Mantém a proporção da imagem */
 }
+
+       /* Estilos personalizados */
+         #search-container {
+            padding-top: 100px; /* Ajuste a altura conforme necessário */
+            text-align: center;
+         }
+         .search-form {
+            max-width: 500px; /* Ajuste a largura máxima conforme necessário */
+            margin: 0 auto; /* Centraliza horizontalmente */
+         }
