@@ -161,3 +161,6 @@
      /* width: 50%; */
   margin: 0 auto;
 }
+.btn-primary {
+  background-color: #007bff;
+}
