@@ -55,10 +55,6 @@ document.addEventListener("DOMContentLoaded", function() {
         // Seleciona a sobreposição de manutenção
         var maintenanceOverlay = document.querySelector('.maintenance-overlay');
 
-        // Adiciona um evento de clique ao botão de fechar
-        closeButton.addEventListener('click', function() {
-            // Oculta a sobreposição de manutenção ao clicar no botão de fechar
-            maintenanceOverlay.style.display = 'none';
-        });
+       
     
 });
