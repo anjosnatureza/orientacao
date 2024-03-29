@@ -47,4 +47,29 @@ document.addEventListener("DOMContentLoaded", function() {
     var spanAno = document.getElementById('anoAtual');
     var anoAtual = new Date().getFullYear();
     spanAno.textContent = anoAtual;
+
+    // efetuar a pesquisa
+      document.getElementById("botaoPesquisar").addEventListener("click", function() {
+         // Obtenha o valor digitado no campo de entrada
+         var termoPesquisa = document.getElementById("pesquisaInput").value.toLowerCase();
+
+         // Se o termo de pesquisa estiver vazio, não faça nada
+         if (termoPesquisa.trim() === "") {
+            return;
+         }
+
+         // Percorra todos os elementos que você deseja pesquisar
+         var elementos = document.querySelectorAll("p, h1, h2, h3, h4, h5, h6");
+         elementos.forEach(function(elemento) {
+            // Verifique se o texto do elemento contém o termo de pesquisa
+            var texto = elemento.textContent.toLowerCase();
+            if (texto.includes(termoPesquisa)) {
+               // Se o texto do elemento contém o termo de pesquisa, exiba-o
+               elemento.style.display = "block"; // Ou qualquer outra forma de destacar o elemento
+            } else {
+               // Caso contrário, oculte-o
+               elemento.style.display = "none";
+            }
+         });
+      });    
 });
