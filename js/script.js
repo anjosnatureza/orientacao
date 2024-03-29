@@ -47,23 +47,4 @@ document.addEventListener("DOMContentLoaded", function() {
     var spanAno = document.getElementById('anoAtual');
     var anoAtual = new Date().getFullYear();
     spanAno.textContent = anoAtual;
-
-    // efetuar a pesquisa
-      document.getElementById("botaoPesquisar").addEventListener("click", function() {
-         var termoPesquisa = document.getElementById("pesquisaInput").value.toLowerCase();
-
-         if (termoPesquisa.trim() === "") {
-            return;
-         }
-
-         var elementos = document.querySelectorAll("p, h1, h2, h3, h4, h5, h6");
-         elementos.forEach(function(elemento) {
-            var texto = elemento.textContent.toLowerCase();
-            if (texto.includes(termoPesquisa)) {
-               elemento.style.display = "block";
-            } else {
-               elemento.style.display = "none";
-            }
-         });
-      }); 
 });
