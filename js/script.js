@@ -47,4 +47,6 @@ document.addEventListener("DOMContentLoaded", function() {
     var spanAno = document.getElementById('anoAtual');
     var anoAtual = new Date().getFullYear();
     spanAno.textContent = anoAtual;
+
+    alert('#### = ', spanAno.textContent);
 });
