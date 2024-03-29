@@ -145,3 +145,6 @@ body {
             max-width: 500px; /* Ajuste a largura máxima conforme necessário */
             margin: 0 auto; /* Centraliza horizontalmente */
          }
+.form-control {
+  width: 50%;
+}
