@@ -3,10 +3,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Utiliza toda a altura da tela */
-    margin: 0; /* Remove margens padrão */
-    padding: 0 20px; /* Adiciona um espaçamento interno */
-    text-align: center; /* Centraliza o texto */
+    height: 30vh; 
+    /* 
+    margin: 0; 
+    padding: 0 20px; 
+    text-align: center; 
+    */
 }
 
 /* Estilos para o conteúdo da mensagem */
