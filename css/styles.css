@@ -4,11 +4,6 @@
     justify-content: center;
     align-items: center;
     height: 30vh; 
-    /* 
-    margin: 0; 
-    padding: 0 20px; 
-    text-align: center; 
-    */
 }
 
 /* Estilos para o conteúdo da mensagem */
@@ -207,9 +202,11 @@ body {
 }
 
 .modal-dialog {
-    display: inline-block;
-    text-align: left;
-    vertical-align: middle;
+    margin: 0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .centered-modal {
