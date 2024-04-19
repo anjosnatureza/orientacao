@@ -197,3 +197,12 @@ body {
     max-width: 80%; /* Defina o máximo desejado */
 }
 
+.modal-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 200px; /* Defina a altura desejada para o modal */
+}
+
+
