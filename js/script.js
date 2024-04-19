@@ -19,8 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     behavior: "smooth",
                 });
             }
-
-            // Check if the menu is in responsive mode and close it
+           
             const navbarToggler = document.querySelector(".navbar-toggler");
 
             if (navbarToggler && navbarToggler.getAttribute("aria-expanded") === "true") {
@@ -29,32 +28,28 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Initialize carousel
+   
     $(".carousel").carousel();
-
-    // Show maintenance modal on page load
+    
     $('#maintenanceModal').modal('show');
-
-    // Smooth scrolling to the top of the page when the page is loaded or refreshed
+    
     window.onload = function() {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
         });
     };
-
-    // Show atual date 
+    
     var spanAno = document.getElementById('anoAtual');
     var anoAtual = new Date().getFullYear();
     spanAno.textContent = anoAtual;
-
-    // referente ao popup de alerta de site em manutenção
-         // Seleciona o botão de fechar
+         
         var closeButton = document.querySelector('.close-button');
-
-        // Seleciona a sobreposição de manutenção
+        
         var maintenanceOverlay = document.querySelector('.maintenance-overlay');
-
-       
+	
+	document.querySelector('.close-button').addEventListener('click', function() {		
+		document.querySelector('.maintenance-overlay').style.display = 'none';
+	});
     
 });
