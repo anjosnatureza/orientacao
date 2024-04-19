@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Utiliza toda a altura da tela */
+    height: 25vh; /* Utiliza toda a altura da tela */
     margin: 0; /* Remove margens padrão */
     padding: 0 20px; /* Adiciona um espaçamento interno */
     text-align: center; /* Centraliza o texto */
