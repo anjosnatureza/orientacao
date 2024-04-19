@@ -159,3 +159,9 @@ body {
 .btn-primary {
     background-color: transparent;
 }
+
+.modal-centered {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
